@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallyApp.MainPage"
+             x:Name="MainView">
+    
+
+    <!-- All Row and Columns definitions are set up in the code behind -->
+    <Grid x:Name="DynamicLayout" Margin="10" Padding="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- For Tally Display Frame -->
+            <RowDefinition Height="Auto"/>
+            <!-- For Total Label -->
+            <RowDefinition Height="*"/>
+            <!-- For Buttons Grid -->
+        </Grid.RowDefinitions>
+
+        <!-- Tally Display Frame -->
+        <Frame x:Name="tallyDisplayFrame" 
+               Grid.Row="0"
+               BorderColor="Black" 
+               CornerRadius="5" 
+               Padding="2" 
+               HeightRequest="240" 
+               WidthRequest="230" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center">
+            
+            <Label x:Name="tallyDisplay" Margin="10" HorizontalOptions="End" VerticalOptions="Start"
+                   TextColor="Black" BackgroundColor="White"/>
+        </Frame>
+
+        <!-- Total Label -->
+        <Label x:Name="totalLabel" Text="Total: 0" WidthRequest="100" Grid.Row="1"/>
+
+        <!-- Grid for the buttons -->
+        <Grid x:Name="buttonsGrid" 
+              Grid.Row="2"
+              HorizontalOptions="Center" 
+              VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Button definitions with Margins -->
+            <Button Grid.Column="0" Text="7" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="1" Text="8" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="2" Text="9" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="0" Grid.Row="1" Text="4" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="1" Grid.Row="1" Text="5" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="2" Grid.Row="1" Text="6" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="0" Grid.Row="2" Text="1" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="1" Grid.Row="2" Text="2" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="2" Grid.Row="2" Text="3" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="0" Grid.Row="3" Text="0" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnNumberClicked"/>
+            <Button Grid.Column="1" Grid.Row="3" Text="C" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnClearClicked"/>
+            <Button Grid.Column="2" Grid.Row="3" Text="+" BackgroundColor="DarkGray" TextColor="White" Margin="5" Clicked="OnPlusClicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>
