@@ -26,7 +26,7 @@ git clone https://github.com/GregusRich/Dynamic-Layout-Tally-App.git
 ## Usage
 - Add numbers to the tally. Includes basic add functionality which displays the total value (Tally). 
 - Clear function.
-- Observing the layout change on orientation switch. The Android API-33 emulator is recommed
+- Observing the layout change on orientation switch. The Android API-33 emulator is recommended.
 
 ## Contributing
 If you'd like to contribute to the development of TallyApp, please follow these steps:
